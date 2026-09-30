@@ -1,0 +1,231 @@
+:root {
+  
+  --color-bg-primary: #F9F9F9;    /* Blanco roto, limpio pero no frío */
+  --color-bg-secondary: #ddd;  /* Tono arena/madera clara */
+  --color-bg-dark: #1A1A1A;       /* Casi negro, para modo oscuro o footer*/
+
+  /* --- Textos*/
+  --color-text-primary: #2C2C2C;  /* Gris muy oscuro, más suave que el negro puro */
+  --color-text-secondary: #6B6B6B;/* Gris medio para párrafos y subtítulos */
+  --color-text-light: #FFFFFF;    /* Blanco puro para textos sobre fondos oscuros */
+
+  /* --- Acentos  --- */
+  --color-accent-primary: #1E3A8A; /* Azul profundo (cielo/lentes) para enlaces o botones */
+  --color-accent-hover: #152C6B;   /* Azul más oscuro para estados hover */
+  --color-accent-secondary: #C06C46;/* Terracota/madera cálida para detalles o etiquetas */
+  
+  /* --- Bordes y Sombras --- */
+  --color-border: #E5E0D8;        /* Borde sutil color madera clara */
+  --shadow-sm: 0px 2px 4px rgba(0,0,0,0.05);
+  --shadow-md: 0px 0px 40px 0px rgba(0,0,0,0.08); /* Sombra suave para tarjetas */
+  
+  /* --- Familias Tipográficas --- */
+  
+  --font-heading: 'Playfair Display', 'Merriweather', serif; /* Elegante y editorial */
+  --font-body: 'Inter', 'Montserrat', sans-serif;            /* Limpia, moderna y legible */
+
+  /* --- Tamaños de Fuente (Escalables) --- */
+  --fs-xs: 0.75rem;    /* 12px - Etiquetas pequeñas */
+  --fs-sm: 0.875rem;   /* 14px - Textos secundarios */
+  --fs-base: 1rem;     /* 16px - Párrafos */
+  --fs-lg: 1.125rem;   /* 18px - Textos destacados */
+  --fs-xl: 1.5rem;     /* 24px - Subtítulos (h3) */
+  --fs-2xl: 2rem;      /* 32px - Títulos de sección (h2) */
+  --fs-3xl: 3rem;      /* 48px - Título principal/Hero (h1) */
+
+  /* --- Pesos de Fuente --- */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  /* --- Espaciado y Altura de Línea --- */
+  --line-height-tight: 1.2;  /* Para títulos grandes */
+  --line-height-base: 1.6;   /* Para párrafos, fácil lectura */
+  --letter-spacing-wide: 0.05em; /* Útil para etiquetas o botones en mayúsculas */
+
+}
+
+
+
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-body);
+    color: var(--color-text-primary);
+    
+}
+html,body{
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg-primary);
+
+}
+span{
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-bold);
+}
+/* ############      HEADER        ##############*/
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-grow: 1;
+    background-color: var(--color-bg-dark);
+    padding-bottom: 1rem;
+    color: var(--color-text-light);
+    border-bottom: var(--color-border);
+    box-shadow: 0px 1px 4px 0px #000;
+    height: 10vh;
+    
+}
+#name_and_location_container{
+    display: flex;
+    flex-grow: 2;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-left: 5rem;
+    color: var(--color-text-light);
+    max-width: 50%;
+
+}
+#name_and_location_container h2, #name_and_location_container p{
+    color: var(--color-text-light);   
+    
+}
+#nav_bar_container{
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: end;
+    min-width: 50%;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    min-width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    
+}
+.nav_bar_content{
+    
+    display: flex;
+    border: solid 1px transparent;
+    align-items: center;
+    color: var(--color-text-light);
+    border: solid 2px transparent;
+    width: 100px;
+    justify-content: center;
+    padding: 5px;
+}
+.nav_bar_content:hover{
+    color: var(--color-accent-hover);
+
+}
+.active{
+    border-bottom: solid 2px var(--color-accent-primary);
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-medium);
+}
+
+
+
+/* ############      Main        ##############*/
+main{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 3;
+    height: 70svh;
+    padding: 3rem;
+    
+    
+    
+    
+}
+#perfil_image_container{
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: 1;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    height: 80%;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 0px #0007;
+}
+#information_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-grow: 1;
+    max-width: 50%;
+    min-width: 50%;
+    
+        
+}
+svg{
+    height: 100px;
+    width: 100px;
+    border-radius: 1rem;
+    margin: 5px;
+}
+section{
+    box-sizing:border-box;
+    padding: 2rem;
+    border-left: solid 5px var(--color-accent-hover);
+    background-color:var(--color-bg-secondary);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px #0007
+
+    
+    
+
+}
+#languages_images_container{
+    display: flex;
+    flex-direction: row;
+}
+
+
+#information_container h2{
+    font-family: var(--font-heading);
+    font-size: var(--fs-2xl);
+    color: var(--color-text-primary);
+    
+}
+p{
+    font-size: var(--fs-base);
+    text-align: start;
+}
+
+/* ###########  Footer     ############## */
+footer{
+    display: flex;
+    justify-content: end;
+    flex-grow: 1;
+    padding-top: 1rem;
+    padding-right: 3rem;
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    border-top: var(--color-border);
+    box-shadow: 0px -1px 4px 0px #000;
+    
+}
+
+footer div{
+    color: var(--color-bg-primary);
+}
+footer div svg{
+    height: 50px;
+    width: 50px;
+    margin-left: 1rem;
+}
